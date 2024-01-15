@@ -1,8 +1,9 @@
 import { Link, useLocation } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { HomeIcon } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeToggle } from '../theme-switcher';
+import { $path } from 'remix-routes';
 
 const tabs = [
   { id: 'home', label: 'Home', href: '/' },
@@ -13,13 +14,17 @@ const Navbar = () => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(location.pathname);
 
+  useEffect(() => {
+    setActiveTab(location.pathname);
+  }, [location.pathname]);
+
   const handleTabChange = (href: string) => {
     setActiveTab(href);
   };
   return (
     <>
-      <div className="fixed z-20 items-center justify-center flex top-5 w-full">
-        <div className="w-full max-w-3xl rounded-full shadow-xl h-16 py-2 px-6 mx-8 backdrop-blur-sm supports-[backdrop-filter]:bg-secondary/40 flex items-center">
+      <div className="fixed z-20 items-center justify-center hidden md:flex top-5 w-full">
+        <div className="w-full max-w-7xl rounded-full shadow-xl h-16 py-2 px-6 mx-8 backdrop-blur-[8px] supports-[backdrop-filter]:bg-background/40 border border-muted flex items-center">
           <div className="grid grid-cols-3 w-full items-center">
             <nav className="flex justify-start">
               <div className="flex w-fit relative rounded-xl gap-x-2 ">
@@ -48,7 +53,7 @@ const Navbar = () => {
               </div>
             </nav>
             <div className="flex justify-center">
-              <Link to="/">
+              <Link to={$path('/')}>
                 <h1 className="font-extrabold text-xl uppercase">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-foreground ">
                     Lauva
@@ -72,7 +77,7 @@ const Navbar = () => {
                 <div className="group">group</div>
               </div>
               <div className="flex justify-center flex-1 w-full h-full mx-auto my-auto outline-none cursor-pointer group">
-                <Link to="/">
+                <Link to={$path('/')}>
                   <motion.div
                     whileTap={{ scale: 0.8 }}
                     transition={{ duration: 0.1 }}
