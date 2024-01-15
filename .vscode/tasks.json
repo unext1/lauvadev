@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "npm",
+        "label": "remix routes",
+        "script": "dev:routes",
+        "isBackground": true,
+        "runOptions": {
+          "runOn": "folderOpen",
+          "instanceLimit": 1
+        }
+      }
+    ]
+  }
+  
