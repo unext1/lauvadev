@@ -22,7 +22,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen flex flex-col relative">
+      <body className="min-h-screen flex flex-col relative overflow-x-hidden">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
