@@ -1,8 +1,8 @@
-import { Link, NavLink, useLocation } from '@remix-run/react';
+import { Link, useLocation } from '@remix-run/react';
 import { motion } from 'framer-motion';
 import { HomeIcon } from 'lucide-react';
-import { ThemeToggle } from '../theme-switcher';
 import { useState } from 'react';
+import { ThemeToggle } from '../theme-switcher';
 
 const tabs = [
   { id: 'home', label: 'Home', href: '/' },
