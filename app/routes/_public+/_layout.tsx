@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div className="h-full flex-1 max-w-7xl mx-auto relative container mt-12 md:mt-28">
+      <div className="h-full flex-1 max-w-7xl mx-auto relative container mt-14 md:mt-28 ">
         <Outlet />
       </div>
       <div className="max-w-7xl mx-auto container">
