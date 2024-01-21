@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 import remixConfig from './remix.config.mjs';
+import svgr from 'vite-plugin-svgr';
 
 installGlobals();
 
@@ -12,5 +13,5 @@ export default defineConfig({
   server: {
     port: 3000
   },
-  plugins: [remixDevTools(), remix(remixConfig), tsconfigPaths()]
+  plugins: [remixDevTools(), remix(remixConfig), tsconfigPaths(), svgr()]
 });
