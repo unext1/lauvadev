@@ -3,7 +3,6 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderD
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
 import '~/tailwind.css';
 import { getTheme } from './services/theme.server';
-import Navbar from './components/layout/navbar';
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const colorScheme = await getTheme(request);
