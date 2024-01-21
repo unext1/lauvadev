@@ -65,7 +65,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -79,4 +79,8 @@
 
 .font-shadow {
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.121), 0 0 32px rgba(255, 255, 255, 0.157);
+}
+
+.section-padding {
+  @apply py-20;
 }
