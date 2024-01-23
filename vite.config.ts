@@ -3,9 +3,9 @@ import { installGlobals } from '@remix-run/node';
 import { remixDevTools } from 'remix-development-tools/vite';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import svgr from 'vite-plugin-svgr';
 
 import remixConfig from './remix.config.mjs';
-import svgr from 'vite-plugin-svgr';
 
 installGlobals();
 
