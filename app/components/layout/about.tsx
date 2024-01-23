@@ -16,7 +16,7 @@ export const About = () => {
           </p>
         </div>
         <div className="flex justify-center items-center ">
-          {/* <img src="me.jpeg" alt="me" className="rounded-xl my-auto w-1/2 sm:w-full" /> */}
+          <img src="/peace.webp" alt="me" className="rounded-xl my-auto w-64 h-64 absolute" />
           <div className="rounded-xl my-auto h-[350px] w-full sm:w-full bg-primary" />
         </div>
       </div>
