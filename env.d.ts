@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /// <reference types="@remix-run/node" />
 /// <reference types="vite/client" />
 
