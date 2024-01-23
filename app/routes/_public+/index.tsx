@@ -33,7 +33,7 @@ export default function Index() {
       <Hero />
       <Skills />
       <About />
-      <PortfolioComponent websites={websites} ctaButton />
+      <PortfolioComponent websites={websites} ctaButton badgeTitle="Work Page" />
       <ContactComponent />
     </div>
   );
