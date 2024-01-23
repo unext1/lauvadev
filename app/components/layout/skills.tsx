@@ -1,9 +1,10 @@
 import { Link } from '@remix-run/react';
+
 import { Badge } from '../ui/badge';
 
 export const Skills = () => {
   return (
-    <div className="flex flex-col items-center relative pb-40 pt-20 z-10 bg-background" id="skills">
+    <div className="flex flex-col items-center relative section-padding z-10 bg-background" id="skills">
       <div className="grid md:grid-cols-2 w-full mx-auto max-w-7xl container">
         <div className=" order-0 md:order-2 text-right my-auto">
           <Badge variant="outline" className="px-6 py-2">
@@ -64,7 +65,19 @@ export const Skills = () => {
             <p className="uppercase text-muted-foreground text-xs">NextJs</p>
           </div>
           <div>
-            <img src="/remix.svg" alt="My logo" className="w-8 h-8 md:h-12 md:w-12 mx-auto" />
+            <svg
+              className="h-12 w-12 fill-foreground mx-auto"
+              viewBox="0 0 800 800"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M587.947 527.768C592.201 582.418 592.201 608.036 592.201 636H465.756C465.756 629.909 465.865 624.337 465.975 618.687C466.317 601.123 466.674 582.807 463.828 545.819C460.067 491.667 436.748 479.634 393.871 479.634H355.883H195V381.109H399.889C454.049 381.109 481.13 364.633 481.13 321.011C481.13 282.654 454.049 259.41 399.889 259.41H195V163H422.456C545.069 163 606 220.912 606 313.42C606 382.613 563.123 427.739 505.201 435.26C554.096 445.037 582.681 472.865 587.947 527.768Z"
+              />
+              <path d="M195 636V562.553H328.697C351.029 562.553 355.878 579.116 355.878 588.994V636H195Z" />
+            </svg>
             <p className="uppercase text-muted-foreground text-xs">Remix.run</p>
           </div>
           <div>
