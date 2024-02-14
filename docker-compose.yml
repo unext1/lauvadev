@@ -9,9 +9,7 @@ services:
       RESEND_API_KEY: ${RESEND_API_KEY}
     networks:
       - proxy
-    ports:
-      - 3000:3000
-
+      
 networks:
   proxy:
     external: true
