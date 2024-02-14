@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  website:
+    build: 
+      context: .
+    container_name: lauva_website
+    restart: unless-stopped
+    environment:
+      RESEND_API_KEY: ${RESEND_API_KEY}
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
