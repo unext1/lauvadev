@@ -1,7 +1,7 @@
 # base node image
 FROM node:20-bullseye-slim as base
 
-RUN sudo npm install -g pnpm
+RUN npm install -g pnpm
 
 # install all node_modules, including dev
 FROM base as deps
