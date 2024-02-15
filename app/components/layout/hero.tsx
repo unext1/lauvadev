@@ -38,10 +38,11 @@ export const Hero = () => {
         Hi there
         <OptimizedImage
           src="../wave.webp"
-          className="flex h-4 pl-1 my-auto animate-wiggle"
+          className="flex  pl-1 pt-0.5 overflow-hidden my-auto animate-wiggle"
           alt="wave emoji"
-          layout="fullWidth"
-          height={16}
+          layout="fixed"
+          width={20}
+          height={18}
         />
         , I&apos;m
       </motion.p>
