@@ -8,6 +8,8 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Textarea } from '../ui/textarea';
+import { motion } from 'framer-motion';
+import { sectionVariant } from '~/lib/section-variant';
 
 const ContactComponent = () => {
   const location = useLocation();
@@ -23,16 +25,23 @@ const ContactComponent = () => {
   }, [fetcher, isAdding]);
 
   return (
-    <div className="max-w-7xl flex justify-center flex-col mx-auto container section-padding" id="contact">
-      <div className="my-8 rounded-xl grid md:grid-cols-2 gap-6 lg:gap-12">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 'some' }}
+      variants={sectionVariant}
+      className="max-w-7xl flex justify-center flex-col mx-auto container section-padding scroll-m-20"
+      id="contact"
+    >
+      <div className="my-8 rounded-md grid md:grid-cols-2 gap-6 lg:gap-12">
         <div className="flex w-full flex-col items-start ">
           <Badge variant="outline" className="px-6 py-2">
             Contact
           </Badge>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl text-left font-bold mt-2 mb-2">
-            Let&apos;s build something <br /> great togheter
+            Let&apos;s build something <br className="hidden md:block" /> great togheter
           </h1>
-          <p className="mt-2 text-muted-foreground text-left ">
+          <p className="mt-2 text-muted-foreground text-left text-sm md:text-base">
             Turning your ideas into real life products is my calling.
           </p>
           <div className="mt-6 text-sm">
@@ -80,7 +89,7 @@ const ContactComponent = () => {
           {fetcher.data ? <p className="text-right mt-6 text-muted-foreground text-sm">Thanks for messaging me</p> : ''}
         </fetcher.Form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ContactComponent;
