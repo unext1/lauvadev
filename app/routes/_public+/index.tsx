@@ -1,29 +1,43 @@
 import type { MetaFunction } from '@remix-run/node';
+
 import { About } from '~/components/layout/about';
 import ContactComponent from '~/components/layout/contact';
-
 import { Hero } from '~/components/layout/hero';
 import { PortfolioComponent } from '~/components/layout/portfolio';
 import { Skills } from '~/components/layout/skills';
 
-export const meta: MetaFunction = () => {
-  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
+export const meta: MetaFunction = ({ location }) => {
+  return [
+    {
+      title: 'Laurynas Valiulis | Portfolio'
+    },
+    {
+      name: 'description',
+      content:
+        "I'm a 20 year old programmer driven for delivering effective solutions with a strong focus on problem solving."
+    },
+    {
+      property: 'og:url',
+      content: `https://lauva.dev${location.pathname}`
+    }
+  ];
 };
 
 const websites = [
   {
     title: 'Menulio Ritmu.',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sequi magnam reiciendis, autem, ipsum molestiae aspernatur ad quisquam commodd.',
+      "This is a website about using the moon's rhythm to plan your days, be more mindful, and improve your self discovery. It offers a calendar,tools, and insights based on the moon's phases and zodiac signs. Fun Fact all moon images are taken from nasa.",
     image: '/project4.png',
-    badges: ['Remix.run', 'Tailwind', 'API']
+    badges: ['Remix.run', 'Tailwind'],
+    href: 'https://menulioritmu.lt'
   },
   {
     title: 'Home By Aurelija.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sequi magnam reiciendis, autem, ipsum molestiae aspernatur ad quisquam commodd.',
+    description: "It's a personal portfolio website for a interior designer.",
     image: '/project5.jpg',
-    badges: ['Remix.run', 'Tailwind']
+    badges: ['Remix.run', 'Tailwind', 'Contentful'],
+    href: 'https://homebyaurelija.com'
   }
 ];
 
