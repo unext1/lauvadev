@@ -15,7 +15,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <footer className="mx-auto max-w-7xl md:flex md:items-center md:justify-between">
+      <footer className="mx-auto max-w-7xl px-8 md:flex md:items-center md:justify-between">
         <div className="md:order-2 group">
           <div className="block">
             <p className="mb-3 text-xs text-center md:text-right uppercase text-muted-foreground">SOCIALS</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                 key={item.name}
                 href={item.href}
                 target="_blank"
-                className="text-white hover:text-primary transition"
+                className="text-foreground hover:text-primary transition"
               >
                 {item.icon}
               </a>
