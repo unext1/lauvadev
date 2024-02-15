@@ -67,19 +67,19 @@ const ContactComponent = () => {
             <Label htmlFor="email" className="text-xs">
               Your Email
             </Label>
-            <Input placeholder="Email" name="email" type="email" required />
+            <Input id="email" placeholder="Email" name="email" type="email" required />
           </div>
           <div className="mt-4">
             <Label htmlFor="subject" className="text-xs">
               Subject
             </Label>
-            <Input placeholder="Subject" name="subject" required />
+            <Input id="subject" placeholder="Subject" name="subject" required />
           </div>
           <div className="mt-4">
             <Label htmlFor="message" className="text-xs">
               Message
             </Label>
-            <Textarea rows={4} placeholder="Message" name="message" required />
+            <Textarea id="message" rows={4} placeholder="Message" name="message" required />
           </div>
           <div className="flex md:justify-end">
             <Button variant="default" className="mt-6 " size="sm" name="_action" value="send" disabled={isAdding}>
