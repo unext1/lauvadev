@@ -58,8 +58,8 @@ export const OptimizedImage = ({
     <Image
       {...props}
       breakpoints={breakpoints}
-      transformer={({ url, width }) =>
-        `/images/${url}?${filteredSearchParams({ q: quality, w: width, output: 'auto' })}`
+      transformer={({ url, width, height }) =>
+        `/images/${url}?${filteredSearchParams({ q: quality, w: width, h: height, output: 'auto' })}`
       }
       className={cn('w-full', className)}
     />

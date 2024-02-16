@@ -1,4 +1,4 @@
-import { json, type LoaderFunctionArgs } from '@remix-run/node';
+import { type LoaderFunctionArgs } from '@remix-run/node';
 import sharp from 'sharp';
 import path from 'path';
 import { z } from 'zod';
@@ -8,6 +8,7 @@ import { fileTypeFromBuffer } from 'file-type';
 const SearchParamsSchema = z.object({
   q: z.string().optional(),
   w: z.string().optional(),
+  h: z.string().optional(),
   output: z.enum(['avif', 'webp', 'jpeg', 'png']).optional()
 });
 
@@ -20,10 +21,11 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   let quality = 75;
   let imageType;
   let width;
+  let height;
 
   const result = getSearchParams(request, SearchParamsSchema);
   if (result.success) {
-    const { q, w, output } = result.data;
+    const { q, w, h, output } = result.data;
     if (q) {
       quality = parseInt(q);
     }
@@ -32,6 +34,9 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
     }
     if (w) {
       width = parseInt(w);
+    }
+    if (h) {
+      height = parseInt(h);
     }
   }
 
@@ -43,7 +48,8 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
     .jpeg({ quality, force: imageType === 'jpeg' })
     .png({ quality, force: imageType === 'png' });
 
-  if (width) image.resize({ width: width });
+  if (width) image.resize({ width });
+  if (height) image.resize({ height });
 
   const imageBuffer = await image.toBuffer();
 
