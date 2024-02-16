@@ -46,7 +46,7 @@ export const Hero = () => {
         />
         , I&apos;m
       </motion.p>
-      <motion.h1
+      {/* <motion.h1
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2 }}
@@ -55,7 +55,7 @@ export const Hero = () => {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-foreground">
           Laurynas
         </span>
-      </motion.h1>
+      </motion.h1> */}
       <motion.p
         initial={{ y: -10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
