@@ -40,6 +40,7 @@ const Navbar = () => {
           <div className="block md:hidden">
             <Drawer>
               <DrawerTrigger asChild>
+                <span className="sr-only">Open nav</span>
                 <Button variant="ghost">
                   <HamburgerMenuIcon />
                 </Button>
