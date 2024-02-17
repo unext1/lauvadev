@@ -64,22 +64,22 @@ const ContactComponent = () => {
           <div>
             <input type="checkbox" name="checkbox" className="hidden" />
 
-            <Label htmlFor="email" className="text-xs">
+            <Label htmlFor="email-input" className="text-xs">
               Your Email
             </Label>
-            <Input id="email" placeholder="Email" name="email" type="email" required />
+            <Input id="email-input" autoComplete="email" placeholder="Email" name="email" type="email" required />
           </div>
           <div className="mt-4">
-            <Label htmlFor="subject" className="text-xs">
+            <Label htmlFor="subject-input" className="text-xs">
               Subject
             </Label>
-            <Input id="subject" placeholder="Subject" name="subject" required />
+            <Input id="subject-input" placeholder="Subject" name="subject" required />
           </div>
           <div className="mt-4">
-            <Label htmlFor="message" className="text-xs">
+            <Label htmlFor="message-textarea" className="text-xs">
               Message
             </Label>
-            <Textarea id="message" rows={4} placeholder="Message" name="message" required />
+            <Textarea id="message-textarea" rows={4} placeholder="Message" name="message" required />
           </div>
           <div className="flex md:justify-end">
             <Button variant="default" className="mt-6 " size="sm" name="_action" value="send" disabled={isAdding}>
