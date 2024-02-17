@@ -36,7 +36,7 @@ export const PortfolioComponent = ({
           <Badge variant="outline" className="px-6 py-2 text-center">
             {badgeTitle}
           </Badge>
-          <h3 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">My Work</h3>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">My Work</h2>
         </div>
         <div className="my-8 space-y-10">
           {websites.map((website) => (

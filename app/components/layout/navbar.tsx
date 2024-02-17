@@ -82,12 +82,12 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center">
             <Link to={$path('/')}>
-              <h2 className="font-bold tracking-wide text-xl uppercase">
+              <div className="font-bold tracking-wide text-xl uppercase">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-foreground">
                   Lauva
                 </span>
                 .Dev
-              </h2>
+              </div>
             </Link>
           </div>
           <div className="flex justify-end items-center space-x-4">

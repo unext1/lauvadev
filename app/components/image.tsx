@@ -61,7 +61,7 @@ export const OptimizedImage = ({
       transformer={({ url, width, height }) =>
         `/images/${url}?${filteredSearchParams({ q: quality, w: width, h: height, output: 'auto' })}`
       }
-      className={cn('w-full', className)}
+      className={cn(className)}
     />
   );
 };

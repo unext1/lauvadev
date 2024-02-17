@@ -84,7 +84,7 @@ export const Skills = () => {
           <Badge variant="outline" className="px-6 py-2">
             Skills
           </Badge>
-          <h3 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Skills & Experience</h3>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Skills & Experience</h2>
 
           <p className="text-sm md:text-base  text-muted-foreground">
             Visit my{' '}

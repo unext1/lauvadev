@@ -35,16 +35,17 @@ export const Hero = () => {
         transition={{ duration: 0.4, delay: 0.1 }}
         className="flex text-base mt-6"
       >
-        Hi there
+        <span>Hi there</span>
         <OptimizedImage
           src="../wave.webp"
-          className="flex  pl-1 pt-0.5 overflow-hidden my-auto animate-wiggle"
+          className="flex pl-1 pt-0.5 overflow-hidden my-auto animate-wiggle"
           alt="wave emoji"
           layout="fixed"
           width={20}
           height={18}
+          quality={5}
         />
-        , I&apos;m
+        <span>, I&apos;m</span>
       </motion.p>
       <motion.h1
         initial={{ y: -10, opacity: 0 }}

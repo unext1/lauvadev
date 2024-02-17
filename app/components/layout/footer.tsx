@@ -29,6 +29,7 @@ const Footer = () => {
                 target="_blank"
                 className="text-foreground hover:text-primary transition"
               >
+                <span className="sr-only">{item.name}</span>
                 {item.icon}
               </a>
             ))}

@@ -18,7 +18,7 @@ export const About = () => {
           <Badge variant="outline" className="px-6 py-2">
             About
           </Badge>
-          <h3 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Web Developer</h3>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Web Developer</h2>
           <p className="text-sm md:text-base text-muted-foreground">
             I&apos;m a 20 year old programmer driven for delivering effective solutions with a strong focus on problem
             solving. My current focus revolves around my passion for web development, where I am actively staying up to
@@ -28,7 +28,7 @@ export const About = () => {
         </div>
         <div className="flex justify-center items-center ">
           <div className="rounded-md my-auto w-64 h-64 absolute">
-            <OptimizedImage src="/peace.webp" alt="me" layout="fullWidth" />
+            <OptimizedImage src="/peace.webp" alt="me" layout="fixed" height={256} width={256} />
           </div>
           <div className="rounded-md my-auto h-[350px] w-full sm:w-full bg-muted/30" />
         </div>
