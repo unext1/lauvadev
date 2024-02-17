@@ -40,8 +40,8 @@ const Image = forwardRef<HTMLImageElement, ImageProps>((props, ref) => {
 Image.displayName = 'Image';
 
 const DEFAULT_RESOLUTIONS = [
-  1920, // 1080p
-  1668, // Various iPads
+  // 1920, // 1080p
+  // 1668, // Various iPads
   1280, // 720p
   1080, // iPhone 6-8 Plus
   828, // iPhone XR/11

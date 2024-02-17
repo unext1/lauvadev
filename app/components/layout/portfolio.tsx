@@ -63,7 +63,7 @@ export const PortfolioComponent = ({
                 </Link>
               </div>
               <div className="rounded-md lg:col-span-2 order-1 md:group-hover:scale-105 transition-all overflow-hidden">
-                <OptimizedImage src={website.image} quality={45} layout="fullWidth" alt="project" />
+                <OptimizedImage src={website.image} quality={55} layout="fullWidth" alt="project" />
               </div>
             </div>
           ))}
