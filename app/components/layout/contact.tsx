@@ -46,7 +46,7 @@ const ContactComponent = () => {
           </p>
           <div className="mt-6 text-sm">
             <a className="flex items-center" href="mailto:info@lauva.dev">
-              <MailIcon className="pr-2" /> info@lauva.dev
+              <MailIcon className="pr-2" /> <span>info@lauva.dev</span>
             </a>
           </div>
           <div className="mt-2 text-sm">
@@ -56,7 +56,7 @@ const ContactComponent = () => {
               rel="noreferrer"
               className="flex items-center"
             >
-              <LinkedinIcon className="pr-2" /> /Laurynas-valiulis
+              <LinkedinIcon className="pr-2" /> <span>/Laurynas-valiulis</span>
             </Link>
           </div>
         </div>
