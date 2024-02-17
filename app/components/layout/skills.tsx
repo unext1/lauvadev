@@ -17,6 +17,7 @@ import {
   TailwindIcon,
   TypescriptIcon
 } from '~/components/icons';
+import { Button } from '../ui/button';
 
 const skills = [
   {
@@ -86,17 +87,14 @@ export const Skills = () => {
           </Badge>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Skills & Experience</h2>
 
-          <p className="text-sm md:text-base  text-muted-foreground">
-            Visit my{' '}
-            <Link
-              to="https://www.linkedin.com/in/laurynas-valiulis"
-              rel="noreferrer"
-              target="_blank"
-              className="text-primary"
-            >
-              LinkedIn
-            </Link>
-          </p>
+          <div className="text-sm md:text-base text-muted-foreground">
+            Visit my
+            <Button variant="link" className="p-0 ml-1 border-none outline-none">
+              <Link to="https://www.linkedin.com/in/laurynas-valiulis" rel="noreferrer" target="_blank">
+                LinkedIn
+              </Link>
+            </Button>
+          </div>
         </div>
         <div className="mt-12 text-center flex flex-wrap gap-6 lg:w-4/5 justify-center md:justify-start">
           {skills.map((skill) => (
