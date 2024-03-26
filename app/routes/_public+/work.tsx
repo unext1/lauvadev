@@ -34,6 +34,13 @@ const websites = [
     image: '/project5.jpg',
     badges: ['Remix.run', 'Tailwind', 'Contentful'],
     href: 'https://homebyaurelija.com'
+  },
+  {
+    title: 'Tenet Estate.',
+    description: 'Real estate projects',
+    image: '/project3.png',
+    badges: ['Nextjs', 'Tailwind', 'Contentful'],
+    href: 'https://www.tenetestate.lt'
   }
 ];
 
