@@ -26,6 +26,10 @@ export const ThemeToggle = () => {
   const fetcher = useFetcher();
 
   const updateTheme = (theme: Theme) => {
+    const element = document.documentElement;
+    element.setAttribute('data-theme', theme);
+    element.style.colorScheme = theme;
+
     fetcher.submit({ theme }, { method: 'POST', action: $path('/api/settings') });
   };
 
