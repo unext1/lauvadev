@@ -24,6 +24,7 @@ export const ThemeToggle = () => {
   const theme = data?.colorScheme ?? 'system';
 
   const fetcher = useFetcher();
+  const optimisticTheme = fetcher.state !== 'idle' ? (fetcher.formData?.get('theme') as Theme) : theme;
 
   const updateTheme = (theme: Theme) => {
     const element = document.documentElement;
@@ -37,13 +38,18 @@ export const ThemeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost">
-          {icons[theme]}
+          {icons[optimisticTheme]}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {themes.map((key) => (
-          <DropdownMenuItem key={key} className="space-x-2" onClick={() => updateTheme(key)} disabled={key === theme}>
+          <DropdownMenuItem
+            key={key}
+            className="space-x-2"
+            onClick={() => updateTheme(key)}
+            disabled={key === optimisticTheme}
+          >
             {icons[key]}
             <span className="capitalize">{key}</span>
           </DropdownMenuItem>
