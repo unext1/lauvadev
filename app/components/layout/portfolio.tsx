@@ -48,7 +48,7 @@ export const PortfolioComponent = ({
                 <span className="font-bold text-2xl lg:text-3xl">{website.title}</span>
 
                 <p className="text-sm  text-muted-foreground mt-2">{website.description}</p>
-                <p className="mt-4 text-sm text-muted-foreground">Created with love:</p>
+                <p className="mt-4 text-sm text-muted-foreground">Made with love:</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {website.badges.map((badge, index) => (
                     <Badge variant="outline" key={index} className="sm:px-6 py-1  sm:py-2 text-center">
