@@ -25,6 +25,15 @@ export const meta: MetaFunction = ({ location }) => {
 
 const websites = [
   {
+    title: 'Field Service App',
+    description:
+      "The ultimate solution for efficient field service management. Easily create projects and tasks for your team inside workplaces, and keep track of time with built-in timesheets. It's all you need to stay organized and productive!",
+    image: '/fields-project.png',
+    badges: ['Remix.run', 'Tailwind', 'TursoDB', 'Shadcn', 'Docker'],
+    href: 'https://fields.lauva.dev',
+    workingOn: true
+  },
+  {
     title: 'Menulio Ritmu.',
     description:
       "This is a website about using the moon's rhythm to plan your days, be more mindful, and improve your self discovery. It offers a calendar,tools, and insights based on the moon's phases and zodiac signs. Fun Fact all moon images are taken from nasa.",
