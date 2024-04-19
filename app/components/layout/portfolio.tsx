@@ -18,6 +18,7 @@ export const PortfolioComponent = ({
     image: string;
     badges: string[];
     href: string;
+    workingOn?: boolean;
   }[];
   ctaButton?: boolean;
   badgeTitle: string;
@@ -45,6 +46,12 @@ export const PortfolioComponent = ({
               key={website.title}
             >
               <div className="col-span-1 order-2 my-auto">
+                {website.workingOn && (
+                  <div className="mb-2">
+                    <Badge>Currently working on</Badge>
+                  </div>
+                )}
+
                 <span className="font-bold text-2xl lg:text-3xl">{website.title}</span>
 
                 <p className="text-sm  text-muted-foreground mt-2">{website.description}</p>
