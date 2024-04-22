@@ -18,15 +18,16 @@ import {
   TypescriptIcon
 } from '~/components/icons';
 import { Button } from '../ui/button';
+import { $path } from 'remix-routes';
 
 const skills = [
   {
-    name: 'NextJs',
-    icon: <NextJsIcon />
-  },
-  {
     name: 'Remix.run',
     icon: <RemixIcon />
+  },
+  {
+    name: 'NextJs',
+    icon: <NextJsIcon />
   },
   {
     name: 'React',
@@ -96,13 +97,20 @@ export const Skills = () => {
             </Button>
           </div>
         </div>
-        <div className="mt-12 text-center flex flex-wrap gap-6 lg:w-4/5 justify-center md:justify-start">
-          {skills.map((skill) => (
-            <div key={skill.name}>
-              {skill.icon}
-              <p className="uppercase text-muted-foreground mt-2 text-xs">{skill.name}</p>
-            </div>
-          ))}
+        <div>
+          <div className="mt-12 text-center flex flex-wrap gap-6 lg:w-4/5 justify-center md:justify-start">
+            {skills.map((skill) => (
+              <div key={skill.name}>
+                {skill.icon}
+                <p className="uppercase text-muted-foreground mt-2 text-xs">{skill.name}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 underline underline-offset-4">
+            <Link to={$path('/skills')} className="text-xs  underline uppercase font-bold">
+              Check out my skills in depth
+            </Link>
+          </div>
         </div>
       </div>
     </motion.div>
