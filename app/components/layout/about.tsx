@@ -4,6 +4,10 @@ import { sectionVariant } from '~/lib/section-variant';
 import { OptimizedImage } from '../image';
 
 export const About = () => {
+  const currentDate = new Date();
+  const myAge = new Date(2003, 10, 8);
+  const currentAge = currentDate.getTime() - myAge.getTime();
+
   return (
     <motion.div
       initial="offscreen"
@@ -20,10 +24,10 @@ export const About = () => {
           </Badge>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl mb-2 font-bold">Web Developer</h2>
           <p className="text-sm md:text-base text-muted-foreground">
-            I&apos;m a 20 year old programmer driven for delivering effective solutions with a strong focus on problem
-            solving. My current focus revolves around my passion for web development, where I am actively staying up to
-            date with new technologiess and techniques. Continual learning is a core of my professional and personal
-            growth.
+            I&apos;m a {Math.trunc(currentAge * 3.168808781402895e-11)} year old programmer driven for delivering
+            effective solutions with a strong focus on problem solving. My current focus revolves around my passion for
+            web development, where I am actively staying up to date with new technologies and techniques. Continual
+            learning is a core of my professional and personal growth.
           </p>
         </div>
         <div className="flex justify-center items-center ">
