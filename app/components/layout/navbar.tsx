@@ -9,7 +9,8 @@ import { motion } from 'framer-motion';
 
 const navigation = [
   { id: 'home', label: 'Home', href: $path('/') },
-  { id: 'work', label: 'Work', href: $path('/work') }
+  { id: 'work', label: 'Work', href: $path('/work') },
+  { id: 'skills', label: 'Skills', href: $path('/skills') }
 ];
 
 const Navbar = () => {
