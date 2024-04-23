@@ -207,7 +207,9 @@ const WorkPage = () => {
                   <div key={skill.name}>
                     <div className="font-semibold">{skill.name}</div>
                     <div className="text-sm">{skill.description}</div>
-                    <div className="text-muted-foreground text-sm">{skill.years} years experience</div>
+                    <div className="text-muted-foreground text-sm">
+                      {Number(skill.years) <= 1 ? `${skill.years} year` : `${skill.years} years`} experience
+                    </div>
                   </div>
                 ))}
               </div>
